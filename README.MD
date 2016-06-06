@@ -1,6 +1,6 @@
 # Angular Directives for d3 tree and graph
 
-![Radial Cluster](https://rawgit.com/komushi/ng-d3tree/master/images/tree.png)
+![Tree](https://raw.githubusercontent.com/komushi/ng-d3tree/master/image/tree.png)
 
 ----------
 Local Demo
