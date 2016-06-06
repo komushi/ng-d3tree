@@ -19,7 +19,7 @@ Online Demo
 -------------
 
 ###Access plunker
-http://localhost:8080
+http://plnkr.co/edit/hATiUn
 
 ----------
 Quick Start
