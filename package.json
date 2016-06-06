@@ -1,0 +1,32 @@
+{
+  "name": "ng-d3tree",
+  "version": "0.1.0",
+  "description": "angular directive for d3.js tree",
+  "main": "main/ng-d3tree.js",
+  "dependencies": {
+    "d3": "^3.5.17"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.1"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/komushi/ng-d3tree.git"
+  },
+  "keywords": [
+    "angular",
+    "d3.js",
+    "tree"
+  ],
+  "author": "Lei Xu <komushi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/komushi/ng-d3tree/issues"
+  },
+  "homepage": "https://github.com/komushi/ng-d3tree#readme"
+}
