@@ -914,96 +914,9 @@
               }
             }, true);  
           }
-
-        //   var width = scope.width,
-        //       height = scope.height;
-
-        //   var labelMap = scope.labelMap;
-
-        //   var d3 = $window.d3;
-
-        //   var rawSvg=elem.find('svg');
-        //   var svg = d3.select(rawSvg[0])
-        //     .attr("width", width)
-        //     .attr("height", height)
-        //     .append("g")
-        //     .attr("pointer-events", "all");
           
-        //   // define render function
-        //   var render = function(json){
-        //     console.log("json");
-        //     console.log(json);
-
-        //     // remove all previous items before render
-        //     svg.selectAll("*").remove();
-
-        //     var force = d3.layout.force()
-        //         .nodes(json.nodes)
-        //         .links(json.links)
-        //         .gravity(.05)
-        //         .linkDistance(width/10)
-        //         .charge(-100)
-        //         .size([width, height])
-        //         .start();
-
-        //     // render relationships as lines
-        //     var link = svg.selectAll("line.link")
-        //             .data(json.links).enter()
-        //             .append("line").attr("class", "link");
-
-
-        //     // render nodes as circles, css-class from label
-        //     var node = svg.selectAll("g.node")
-        //             .data(json.nodes).enter().append("g")
-        //             .attr("class", "node")
-        //             .call(force.drag);
-
-        //     node.append("text")
-        //           .attr("class", "nodetext")
-        //           .attr("dx", 12)
-        //           .attr("dy", ".35em")
-        //           .text(function(d) { return getNodeText(d, labelMap); });
-                    
-        //     node.append("circle")
-        //             .attr("r", 4.5);
-
-        //     // force feed algo ticks for coordinate computation
-        //     force.on("tick", function() {
-        //         link.attr("x1", function(d) { return d.source.x; })
-        //                 .attr("y1", function(d) { return d.source.y; })
-        //                 .attr("x2", function(d) { return d.target.x; })
-        //                 .attr("y2", function(d) { return d.target.y; });
-
-        //         node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-        //     });
-        //   };
-
-        //   if (scope.jsonPath) 
-        //   {
-        //     // load graph (nodes,links) json from /graph endpoint
-        //     d3.json(scope.jsonPath, function(error, json) {
-        //         if (error) 
-        //           {
-        //             console.error(error);
-        //             return;
-        //           }
-        //           render(json);
-        //     });
-        //   }
-        //   else
-        //   {
-        //     // watch for data changes and re-render
-        //     scope.$watch('data', function(newVals, oldVals) {
-        //       if (newVals) 
-        //       {
-        //         return render(newVals);
-        //       }
-        //     }, true);              
-
-        //   }
-
-        //   d3.select(self.frameElement).style("height", height + "px");
-        // }
+          d3.select(self.frameElement).style("height", height + "px");
+        }
      };
-  };
+  });
 }() );
