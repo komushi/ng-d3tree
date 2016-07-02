@@ -714,7 +714,7 @@
           var d3 = $window.d3;
 
           var x = d3.scale.ordinal().rangeBands([ 0, width ]);
-          var cellSize = 30;
+          var cellSize = 12;
           var gapSize = 10;
           var z = d3.scale.linear().domain([ 0, 4 ]).clamp(true);
           var c = d3.scale.category10().domain(d3.range(10));
@@ -914,7 +914,7 @@
               }
             }, true);  
           }
-          
+
           d3.select(self.frameElement).style("height", height + "px");
         }
      };
