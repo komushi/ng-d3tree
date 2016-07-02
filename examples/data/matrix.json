@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "name": "Myriel",
+      "group": 1
+    },
+    {
+      "name": "Child2",
+      "group": 10
+    },
+    {
+      "name": "Brujon",
+      "group": 4
+    },
+    {
+      "name": "Mme.Hucheloup",
+      "group": 8
+    }
+  ],
+  "links": [
+    {
+      "source": 1,
+      "target": 2,
+      "value": 1
+    },
+    {
+      "source": 0,
+      "target": 1,
+      "value": 8
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "value": 1
+    },
+    {
+      "source": 0,
+      "target": 1,
+      "value": 1
+    }
+  ]
+}

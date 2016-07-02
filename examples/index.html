@@ -6,9 +6,28 @@
 
     <script src="https://code.angularjs.org/1.5.5/angular.js" data-semver="1.5.5" data-require="angularjs@1.5.5"></script>
     <script data-require="d3@*" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
-    <script type="text/javascript" src="https://rawgit.com/komushi/ng-d3tree/master/src/ng-d3tree.js"></script>
 
+<!--    
+    <script type="text/javascript" src="https://rawgit.com/komushi/ng-d3tree/master/src/ng-d3tree.js"></script>
+-->
+    <script type="text/javascript" src="../src/ng-d3tree.js"></script>
     <link rel="stylesheet" href="https://rawgit.com/komushi/ng-d3tree/master/src/css/ng-d3tree.css" />
+<!--
+    <link rel="stylesheet" href="style.css" />
+-->
+
+<style>
+@import url(style.css);
+
+.cell {
+  stroke: LightGrey;
+  stroke-width: 1;
+}
+
+text.active {
+  fill: red;
+}
+</style>
 
 </head>
 
@@ -19,6 +38,7 @@
 var app = angular.module("d3treeApp", ['ngD3tree']); 
 app.controller("treeCtrl", ['$scope', '$interval', '$http', function($scope, $interval, $http) {
   
+  // Reingold-Tilford Tree
   var jsons = [];
 
   $http.get('data/data2.json')
@@ -33,20 +53,38 @@ app.controller("treeCtrl", ['$scope', '$interval', '$http', function($scope, $in
 
   $interval(function(){
     var idx = Math.floor(Math.random() * 2);
-    $scope.d3json = jsons[idx];
+    $scope.treeJson = jsons[idx];
   }, 1000, 1000);
+
+  // Adjacency Matrix
+  $http.get('data/matrix.json')
+       .success(function(res){
+          $scope.matrixJson = res;
+        });
 
 }]);
 </script>
 
 <div ng-controller="treeCtrl">
-  <h2>Reingold-Tilford Tree Static</h2>
-  <reingold-tilford-tree
-    data="d3json"
-    width="550"
-    height="500"
-    json-path="">
-  </reingold-tilford-tree>
+  <div>
+    <h2>Reingold-Tilford Tree Static</h2>
+    <reingold-tilford-tree
+      data="treeJson"
+      width="550"
+      height="500"
+      json-path="">
+    </reingold-tilford-tree>
+  </div>
+  
+  <div>
+    <h2>Adjacency Matrix - Miserables</h2>
+    <adjacency-matrix
+      data="matrixJson"
+      width="720"
+      height="720"
+      json-path="">
+    </adjacency-matrix>
+  </div>
 </div>
 
 
