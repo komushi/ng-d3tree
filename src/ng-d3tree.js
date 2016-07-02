@@ -705,7 +705,7 @@
             top : 80,
             right : 160,
             bottom : 160,
-            left : 80
+            left : 280
           };
 
           var width = scope.width,
