@@ -787,7 +787,7 @@
               groupRange.push(last);
             }
             // The default sort order.
-            x.domain(orders.name);
+            x.domain(orders.count);
             //            svg.append("rect").attr("class", "background").attr(
             //                "width", width).attr("height", height);
             var row = svg.selectAll(".row").data(matrix).enter()
