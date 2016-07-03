@@ -7,27 +7,9 @@
     <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
     <script data-require="d3@*" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
 
+
     <script type="text/javascript" src="https://rawgit.com/komushi/ng-d3tree/master/src/ng-d3tree.js"></script>
     <link rel="stylesheet" href="https://rawgit.com/komushi/ng-d3tree/master/src/css/ng-d3tree.css" />
-
-    <script type="text/javascript" src="ng-d3matrix.js"></script>
-
-<!--
-    <link rel="stylesheet" href="style.css" />
--->
-
-<style>
-@import url(style.css);
-
-.cell {
-  stroke: LightGrey;
-  stroke-width: 1;
-}
-
-text.active {
-  fill: red;
-}
-</style>
 
 </head>
 
@@ -35,7 +17,7 @@ text.active {
 <body ng-app="d3treeApp">
 
 <script>
-var app = angular.module("d3treeApp", ['ngD3tree', 'ngD3matrix']); 
+var app = angular.module("d3treeApp", ['ngD3tree']); 
 app.controller("treeCtrl", ['$scope', '$interval', '$http', function($scope, $interval, $http) {
   
   // Reingold-Tilford Tree
@@ -74,16 +56,6 @@ app.controller("treeCtrl", ['$scope', '$interval', '$http', function($scope, $in
       height="500"
       json-path="">
     </reingold-tilford-tree>
-  </div>
-
-  <div style="width:800px; margin:0 auto;">
-    <h2>Adjacency Matrix - Miserables</h2>
-    <div adjacency-matrix
-      data="matrixJson"
-      width="720"
-      height="720"
-      json-path="">
-    </div>
   </div>
 </div>
 
