@@ -4,6 +4,7 @@
   "description": "angular directive for d3.js tree",
   "main": "main/ng-d3tree.js",
   "dependencies": {
+    "angular": "~1.5",
     "d3": "^3.5.17"
   },
   "devDependencies": {

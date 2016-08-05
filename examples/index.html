@@ -7,10 +7,13 @@
     <script src="https://code.angularjs.org/1.5.7/angular.min.js"></script>
     <script data-require="d3@*" data-semver="3.5.3" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
 
+    <script type="text/javascript" src="lib/ng-d3tree.js"></script>
+    <link rel="stylesheet" href="lib/css/ng-d3tree.css" />
 
-    <script type="text/javascript" src="https://rawgit.com/komushi/ng-d3tree/master/src/ng-d3tree.js"></script>
+
+<!--     <script type="text/javascript" src="https://rawgit.com/komushi/ng-d3tree/master/src/ng-d3tree.js"></script>
     <link rel="stylesheet" href="https://rawgit.com/komushi/ng-d3tree/master/src/css/ng-d3tree.css" />
-
+ -->
 </head>
 
 
@@ -23,25 +26,25 @@ app.controller("treeCtrl", ['$scope', '$interval', '$http', function($scope, $in
   // Reingold-Tilford Tree
   var jsons = [];
 
-  $http.get('data/data2.json')
-       .success(function(res){
-          jsons.push(res);
-        });
+  // $http.get('data/data2.json')
+  //      .success(function(res){
+  //         jsons.push(res);
+  //       });
 
-  $http.get('data/data1.json')
-       .success(function(res){
-          jsons.push(res);
-        });
+  // $http.get('data/data1.json')
+  //      .success(function(res){
+  //         jsons.push(res);
+  //       });
 
-  $interval(function(){
-    var idx = Math.floor(Math.random() * 2);
-    $scope.treeJson = jsons[idx];
-  }, 1000, 1000);
+  // $interval(function(){
+  //   var idx = Math.floor(Math.random() * 2);
+  //   $scope.treeJson = jsons[idx];
+  // }, 1000, 1000);
 
   // Adjacency Matrix
-  $http.get('data/matrix.json')
+  $http.get('data/data1.json')
        .success(function(res){
-          $scope.matrixJson = res;
+          $scope.treeJson = res;
         });
 
 }]);
